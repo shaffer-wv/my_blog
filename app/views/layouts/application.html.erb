@@ -26,15 +26,15 @@
 	<!--sidebar-->
 	<div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
+        <div class="span4">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">About Me</li>
-              <em>This is the homepage, portfolio and blog of Jason Shaffer, a Systems Admin and Software developer.</em>
+              <em>This is the homepage, portfolio and blog of Jason Shaffer, a Systems Admin and Software developer. <%= link_to "Learn more", "#" %>.</em>
               
               <li class="nav-header">Pages</li>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Blog", articles_path %></li>
               <li><a href="#">Portfolio</a></li>
               <li class="nav-header">Topics</li>
               <li><a href="#">Link</a></li>
@@ -44,23 +44,16 @@
           </div><!--/.well -->
         </div><!--/span-->
 
-        <div class="span9">
-          <div class="hero-unit">
-            <h1>Hello, Katie!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            
-          </div>
+        <div class="span8">          
           <div class="row-fluid">
-            <div class="span9">
+            <div class="span8">
               <%= yield %>
-            </div><!--/span-->
-           
-            
+            </div><!--/span-->           
           </div><!--/row-->
         </div><!--/span-->
       </div><!--/row-->
-
-      <hr>
+  </div><!--/container-->
+  <hr>
 
 
 </body>

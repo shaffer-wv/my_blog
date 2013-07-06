@@ -1,10 +1,17 @@
 MyBlog::Application.routes.draw do
 
+  root :to => 'pages#home'
+
   resources :articles do
     resources :comments
   end
 
   resources :tags
+
+  match "home", to: 'pages#home'
+
+  match "portfolio", to: 'pages#portfolio'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
