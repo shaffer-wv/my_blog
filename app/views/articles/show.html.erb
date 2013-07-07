@@ -21,9 +21,11 @@
 
 <div>
 	<ul>
-		<%= link_to '<< Back to Articles List', articles_path %> | 
-		<%= link_to 'Delete', article_path(@article), method: :delete, confirm: "Delete the Article?" %> | 
-		<%= link_to 'Edit', edit_article_path(@article) %>
+		<% if logged_in? %>
+			<%= link_to '<< Back to Articles List', articles_path %> | 
+			<%= link_to 'Delete', article_path(@article), method: :delete, confirm: "Delete the Article?" %> | 
+			<%= link_to 'Edit', edit_article_path(@article) %>
+		<% end %>
 	</ul>
 </div>
 
