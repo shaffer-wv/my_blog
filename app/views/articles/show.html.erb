@@ -1,11 +1,6 @@
 <h1><%= @article.title %></h1>
-
-  Tags:
-  <% @article.tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
-  <% end %>
-
-
+<!--needs fixed to add the 'th' on days-->
+<em><%= @article.created_at.strftime("%A, %B %-d, %Y") %> at <%= @article.created_at.strftime("%I:%M%p") %></em>
 <hr />
 
 <p>
@@ -16,9 +11,6 @@
 <div>
 	 <%= @article.body%>
 </div>
-
-
-
 <div>
 	<ul>
 		<% if logged_in? %>
@@ -28,12 +20,10 @@
 		<% end %>
 	</ul>
 </div>
-
 <div>
 	<h4>Comments (<%= @article.comments.size %>)</h4>
 	<%= render partial: 'articles/comment', collection: @article.comments %>
 </div>
-
 <div><%= render partial: 'comments/form' %></div>
 
 
