@@ -1,6 +1,6 @@
 <h1><%= @article.title %></h1>
 <!--needs fixed to add the 'th' on days-->
-<em><%= @article.created_at.strftime("%A, %B %-d, %Y") %> at <%= @article.created_at.strftime("%I:%M%p") %></em>
+<em><%= @article.created_at.strftime("%A, %B %-d, %Y") %> at <%= @article.created_at.strftime("%-I:%M %p") %></em>
 <hr />
 <div>
 	<p>
