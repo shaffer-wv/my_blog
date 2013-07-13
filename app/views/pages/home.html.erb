@@ -1,0 +1,11 @@
+<h3>Latest Article</h3>
+<div>
+	<p>
+		<% if latest_article.nil? %>
+			<%= link_to "Create a New Article", new_article_path %>			
+		<% else %>
+			<%= latest_article.body %>
+		<% end %>
+	</p>
+
+</div>

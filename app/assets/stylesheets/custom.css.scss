@@ -1,0 +1,51 @@
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+/* universal */
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* Make links red */
+a {
+	color: #CC0000;
+}
+
+/* Make admin links blue */
+a.admin {
+	color: #0000FF;
+}
+
+h5.comment {
+	color: #CC0000;
+}
+
+h6.comment {
+	color: #CC0000;
+}
+
+.nav-header {
+	color: #000000;
+}
+

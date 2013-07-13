@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>System Admin & Software Developer - Jason Shaffer</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<%= render 'layouts/navbar' %>
+
+	
+	<div class="container-fluid">
+      <div class="row-fluid">
+        <!--sidebar-->
+        <%= render 'layouts/sidebar' %>
+        <!--main banner-->
+        <div class="span8">
+          <div class="hero-unit">
+			       <h1>My Name</h1>
+        	   <p>This is the homepage, portfolio and blog. There will be some more random text here.</p>
+          </div><!--/hero-->          
+          <div class="row-fluid">
+            <div class="span8">
+              <%= yield %>
+            </div><!--/span-->           
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+  </div><!--/container-->
+  <hr>
+  <h6>
+    <% if logged_in? %>
+      <%= "Logged in as #{current_user.username}" %>
+    <% end %>
+  </h6>
+
+
+
+</body>
+</html>

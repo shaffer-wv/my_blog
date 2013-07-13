@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <nav>
+          <ul class="nav pull-right">
+            <% if logged_in? %>
+              <li><%= link_to "Logout", logout_path %></li>
+            <% end %>
+          </ul>
+          
+        </nav>
+      </div>
+    </div>
+  </header>
