@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>System Admin & Software Developer - Jason Shaffer</title>
@@ -10,51 +11,17 @@
     <![endif]-->
 </head>
 <body>
-	<header class="navbar navbar-fixed-top navbar-inverse">
-		<div class="navbar-inner">
-			<div class="container-fluid">
-				<nav>
-					<ul class="nav pull-right">
-            <% if logged_in? %>
-              <li><%= link_to "Logout", logout_path %></li>
-            <% else %>
-              <li><%= link_to "Sign In", login_path %></li>
-            <% end %>
-					</ul>
-					
-				</nav>
-			</div>
-		</div>
-	</header>
+	<%= render 'layouts/navbar' %>
 
 	<!--sidebar-->
 	<div class="container-fluid">
       <div class="row-fluid">
-        <div class="span4">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">About Me</li>
-              <em>This is the homepage, portfolio and blog of Jason Shaffer, a Systems Admin and Software developer. <%= link_to "Learn more", "#" %>.</em>
-              
-              <li class="nav-header">Pages</li>
-              <li><%= link_to "Home", root_path %></li>
-              <li><%= link_to "Blog", articles_path %></li>
-              <li><a href="#">Portfolio</a></li>
-              <li class="nav-header">Topics</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-
-        <div class="span8">          
-          <div class="row-fluid">
-            <div class="span8">
-              <%= yield %>
-            </div><!--/span-->           
-          </div><!--/row-->
-        </div><!--/span-->
+        <!--sidebar-->
+        <%= render 'layouts/sidebar' %>
+        <!--articles-->
+        <div class="span8">
+          <%= yield %>
+        </div><!--/span-->           
       </div><!--/row-->
   </div><!--/container-->
   <hr>
@@ -63,10 +30,5 @@
       <%= "Logged in as #{current_user.username}" %>
     <% end %>
   </h6>
-
-  
-  
-
-
 </body>
 </html>
