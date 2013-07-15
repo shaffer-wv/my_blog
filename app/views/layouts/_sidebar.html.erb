@@ -8,7 +8,7 @@
         <li><%= link_to "Home", home_path %></li>
         <li><%= link_to "Blog", articles_path %></li>
         <li><%= link_to "Portfolio", portfolio_path %></li>
-        <li><%= link_to "Contact", '#' %></li>
+        <li><%= link_to "Contact", messages_path %></li>
         <li class="nav-header">Recent Posts</li>
         <% recent_articles.each do |article| %>
           <li><%= link_to article.title, article_path(article) %></li>

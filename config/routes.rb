@@ -1,5 +1,8 @@
 MyBlog::Application.routes.draw do
 
+  match 'contact' => 'messages#new', :as => 'messages', :via => :get
+  match 'contact' => 'messages#create', :as => 'messages', :via => :post
+
   root :to => 'pages#home'
 
   resources :articles do
