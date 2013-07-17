@@ -4,7 +4,7 @@
 		<% if latest_article.nil? %>
 			<%= link_to "Create a New Article", new_article_path %>			
 		<% else %>
-			<%= latest_article.body %>
+			<%= truncate(latest_article.body, length: 250, separator: ' ') %> <%= link_to "Read More", article_path(latest_article) %>
 		<% end %>
 	</p>
 
