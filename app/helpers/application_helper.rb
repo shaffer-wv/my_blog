@@ -21,7 +21,7 @@ module ApplicationHelper
 		    # and more ... (prettify, with_toc_data, xhtml)
 	  	}
 
-	  	renderer = Redcarpet::Render::HTML.new(render_options)
+	  	renderer = HTML.new(render_options)
 
 	  	extensions = {
 		    #will parse links without need of enclosing them
@@ -44,6 +44,21 @@ module ApplicationHelper
 		    # space_after_headers: true
 	  	}
 	  	Redcarpet::Markdown.new(renderer, extensions).render(text).html_safe
+	end
+
+	class HTML < Redcarpet::Render::HTML
+		# to use Rouge with Redcarpet
+		include Rouge::Plugins::Redcarpet
+		# overriding Redcarpet method
+		def block_code(code, language)
+			# highlight some code with a given language lexer 
+    		# and formatter: html or terminal256 
+    		# and block if you want to stream chunks
+    		Rouge.highlight(code, language || 'text', 'html')
+    		# watch out you need to provide 'text' as a default, 
+    		# because when you not provide language in Markdown 
+    		# you will get error: <RuntimeError: unknown lexer >
 		end
+	end
 	
 end

@@ -108,6 +108,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     redcarpet (3.0.0)
+    rouge (0.3.8)
+      thor
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -144,6 +146,7 @@ DEPENDENCIES
   paperclip
   rails (= 3.2.13)
   redcarpet
+  rouge
   sass-rails (~> 3.2.3)
   sorcery
   sqlite3
