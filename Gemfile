@@ -27,6 +27,8 @@ gem 'paperclip'
 gem 'sorcery'
 gem 'active_attr', '0.7.0'
 
+gem 'redcarpet'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

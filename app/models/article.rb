@@ -17,6 +17,5 @@ class Article < ActiveRecord::Base
   		self.tags = new_or_found_tags
   	end
 
-    
-  	
+      	
 end

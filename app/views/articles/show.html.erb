@@ -11,8 +11,9 @@
 </div>
 
 <div>
-	 <%= @article.body%>
+	 <%= markdown @article.body %>
 </div>
+<br>
 <div>
 	<ul>
 		<% if logged_in? %>
