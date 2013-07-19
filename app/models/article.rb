@@ -7,6 +7,9 @@ class Article < ActiveRecord::Base
     # part of paperclip. declares that this model can accept a file attachemnt
     has_attached_file :image
 
+    validates_presence_of :title
+    validates_presence_of :body
+
   	def tag_list
   		tags.join(", ")
   	end

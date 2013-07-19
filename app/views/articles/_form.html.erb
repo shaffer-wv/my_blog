@@ -1,29 +1,22 @@
-<%= form_for(@article, html: {multipart: true}) do |f| %>
+<%= simple_form_for(@article, html: {multipart: true, class: "form-horizontal"}) do |f| %>
   <ul>
   <% @article.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
   </ul>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.label :tag_list %><br />
-    <%= f.text_field :tag_list %>
-  </p>
+  <%= f.input :title, input_html: { class: 'span12', }  %>
+  <%= f.input :body, input_html: { class: 'span12', }  %>
+  <%= f.input :tag_list %>
   <p>
     <% if @article.image.exists? %>
       <%= image_tag @article.image.url %>
     <% end %>
-    <%= f.label :image, "Attach an Image" %><br />
-    <%= f.file_field :image %>
+    <%= f.input :image %>
   </p>
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Save changes</button>
+  </div>
+  <!--<div class="form-actions">
+    <%= f.button :submit %>
+  </div>-->
 <% end %>

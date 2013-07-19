@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'paperclip'
 gem 'sorcery'
 gem 'active_attr', '0.7.0'
+gem 'simple_form'
 
 # Markdown to format article text and add code snippets
 gem 'redcarpet'
