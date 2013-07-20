@@ -8,7 +8,6 @@ gem 'bootstrap-sass', '2.3.2.0'
 
 gem 'sqlite3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -31,6 +30,19 @@ gem 'simple_form'
 # Markdown to format article text and add code snippets
 gem 'redcarpet'
 gem 'rouge'
+
+group :development do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
